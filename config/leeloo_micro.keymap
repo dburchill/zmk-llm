@@ -95,10 +95,10 @@
         //           ╰──────────┴──────────┴──────────┴──────────╯                       ╰──────────┴──────────┴──────────┴──────────╯
 
 
-            &kp Q       &kp W      &kp E      &kp R      &kp T                              &kp Y      &kp U      &kp I      &kp O      &kp P
-            HRML(A,     S,         D,         F)         &kp G                              &kp H      HRMR(J,    K,          L,       SEMI)
-            &mt LSHFT Z &kp X      &kp C      &kp V      &kp B        &mo QC_N    &kp RGUI    &kp N      &kp M      &kp COMMA  &kp DOT    &mt RSHFT FSLH
-                        &kp LALT   &kp LCTRL  &lt 1 TAB  &lt 2 SPACE  &lt 3 RET   &lt 1 SPACE  &kp BSPC   &mo QC_B
+            &kp Q       &kp W      &kp E      &kp R      &kp T                                 &kp Y      &kp U      &kp I      &kp O      &kp P
+            HRML(A,     S,         D,         F)         &kp G                                 &kp H      HRMR(J,    K,          L,       SEMI)
+            &mt LSHFT Z &kp X      &kp C      &kp V      &kp B      &mo QC_N       &kp RGUI    &kp N      &kp M      &kp COMMA  &kp DOT    &mt RSHFT FSLH
+                                   &mo 4      &kp LCTRL  &lt 1 TAB  &lt 3 SPACE    &lt 3 RET   &lt 1 SPACE  &kp BSPC   &mo QC_B
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -161,8 +161,8 @@
                       
         &kp DEL      &kp N1     &kp N2    &kp N3     &kp N0                         &kp C_VOL_UP  &kp LPAR   &kp RPAR   &trans    &trans
         &trans       &kp N4     &kp N5    &kp N6     &trans                         &kp C_VOL_DN  &kp LBRC   &kp RBRC   &trans    &trans
-        &trans       &kp N7     &kp N8    &kp N9     &trans  &trans        &trans    &kp C_MUTE    &trans     &trans     &trans    &trans
-                                          &trans     &trans  &trans        &trans    &trans        &trans
+        &trans       &kp N7     &kp N8    &kp N9     &trans  &trans        &trans   &kp C_MUTE    &trans     &trans     &trans    &trans
+                                          &trans     &trans  &trans        &trans   &trans        &trans
               
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -170,13 +170,13 @@
 
     
         adjust_layer {
-            display-name = " Adjust";
+            display-name = " FPad";
             bindings = <
 
-&kp F1     &kp F2     &kp F3     &kp F4     &kp F5                           &trans     &trans     &trans     &trans     &trans
-&kp F6     &kp F7     &kp F8     &kp F9     &kp F10                          &trans     &trans     &trans     &trans     &trans
-&kp F11    &kp F12    &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
-                      &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+            &kp F1     &kp F2     &kp F3     &kp F4     &kp F5                           &kp F16     &kp F17   &kp F18    &kp F19    &kp F20
+            &kp F6     &kp F7     &kp F8     &kp F9     &kp F10                          &kp F21     &kp F22   &kp F23    &kp F24     &trans
+            &kp F11    &kp F12    &kp F13    &kp F14    &kp F15    &trans     &trans     &trans     &trans     &trans     &trans     &trans
+                       &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
