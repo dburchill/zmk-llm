@@ -128,26 +128,6 @@ right_layer {
         };
 
 
-// 2
-left_layer {
-            display-name = " Raise";
-            bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮                 ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│    &     │    *     │    -     │     >    │    ~     │                 │  ^       │    &     │    >     │    (     │    )     │
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤                 ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│    "     │    [     │    {     │    (     │   \      │                 │  *       │  -       │  =       │    :     │   ;      │
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤                 ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│    '     │    ]     │    }     │    )     │   |      │                 │  (n)     │  _       │  +       │  │       │          │
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤                 ├──────────┼──────────┼──────────┴──────────┴──────────╯
-        //                                 ╰──────────┴──────────╯                 ╰──────────┴──────────╯
-                      
-        &kp AMPS   &kp STAR   &kp MINUS   &kp GT     &kp TILDE                      &kp CARET   &kp AMPS   &kp GT     &kp LPAR   &kp RPAR
-        &kp DQT    &kp LBKT   &kp LBRC    &kp LPAR   &kp BSLH                       &kp ASTRK   &kp MINUS  &kp EQUAL  &kp COLON  &kp SEMI
-        &kp SQT    &kp RBKT   &kp RBRC    &kp RPAR   &kp PIPE   &trans     &trans   &trans      &kp UNDER  &kp PLUS   &kp PIPE   &trans
-                              &trans      &trans     &trans     &trans     &trans   &trans      &trans     &trans
-            >;  
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
-        };
 
 // 3 
 num_layer {
@@ -173,6 +153,28 @@ num_layer {
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
+
+
+// 2
+left_layer {
+            display-name = " Raise";
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮                 ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│    &     │    *     │    -     │     >    │    ~     │                 │  ^       │    &     │    >     │    (     │    )     │
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤                 ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│    "     │    [     │    {     │    (     │   \      │                 │  *       │  -       │  =       │    :     │   ;      │
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤                 ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│    '     │    ]     │    }     │    )     │   |      │                 │  (n)     │  _       │  +       │  │       │          │
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤                 ├──────────┼──────────┼──────────┴──────────┴──────────╯
+        //                                 ╰──────────┴──────────╯                 ╰──────────┴──────────╯
+                      
+        &kp AMPS   &kp STAR   &kp MINUS   &kp GT     &kp TILDE                      &kp CARET   &kp AMPS   &kp GT     &kp LPAR   &kp RPAR
+        &kp DQT    &kp LBKT   &kp LBRC    &kp LPAR   &kp BSLH                       &kp ASTRK   &kp MINUS  &kp EQUAL  &kp COLON  &kp SEMI
+        &kp SQT    &kp RBKT   &kp RBRC    &kp RPAR   &kp PIPE   &trans     &trans   &trans      &kp UNDER  &kp PLUS   &kp PIPE   &trans
+                              &trans      &trans     &trans     &trans     &trans   &trans      &trans     &trans
+            >;  
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+        };
 
 // 4 
 adjust_layer {
