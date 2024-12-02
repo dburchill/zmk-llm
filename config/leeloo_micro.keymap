@@ -127,20 +127,27 @@
         };
 
 
-        raise_layer {
+        left_layer {
             display-name = " Raise";
             bindings = <
-&kp TAB    &trans     &trans     &trans     &trans                           &kp PG_UP  &kp HOME   &kp UP     &kp END    &kp BSLH
-&kp CAPS   &trans     &trans     &trans     &trans                           &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp GRAVE
-&trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &mt RSHFT TILDE
-                      &trans     &trans     &trans     &trans     &trans     &trans     &kp DEL    &trans
-            >;
-
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮                 ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│    &     │    *     │    -     │     >    │    ~     │                 │  ^       │    &     │    >     │    (     │    )     │
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤                 ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│    "     │    [     │    {     │    (     │   \      │                 │  *       │  -       │  =       │    :     │   ;      │
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤                 ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│    '     │    ]     │    }     │    )     │   |      │                 │  (n)     │  _       │  +       │  │       │          │
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤                 ├──────────┼──────────┼──────────┴──────────┴──────────╯
+        //                                 ╰──────────┴──────────╯                 ╰──────────┴──────────╯
+                      
+        &kp AMPS   &kp STAR   &kp MINUS   &kp GT     &kp TILDE                      &kp CARET   &kp AMPS   &kp GT     &kp LPAR   &kp RPAR
+        &kp DQT    &kp LBKT   &kp LBRC    &kp LPAR   &kp BSLH                       &kp ASTRK   &kp MINUS  &kp EQUAL  &kp COLON  &kp SEMI
+        &kp SQT    &kp RBKT   &kp RBRC    &kp RPAR   &kp PIPE                       &trans      &kp UNDER  &kp PLUS   &kp PIPE   &trans
+                              &trans      &trans     &trans     &trans     &trans   &trans      &trans     &trans
+            >;  
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
-
-
+    
         adjust_layer {
             display-name = " Adjust";
             bindings = <
