@@ -119,13 +119,14 @@ right_layer {
         //           ╰──────────┴──────────┴──────────┴──────────╯                ╰──────────┴──────────┴──────────┴──────────╯
 
         
-        &kp LBKT     &kp LBRC    &kp LPAR    &kp N4     &kp N5                     &kp BSPC    &kp BSPC   &kp RPAR   &kp RBRC   &kp RBKT
-        &kp EXCL     &kp AT      &kp HASH    &kp DLLR   &kp PRCNT                  &kp LEFT    &kp DOWN   &kp UP     &kp RIGHT  &kp SEMI
-        &caps_word   &kp GRAVE   &kp CARET   &kp AMPS   &kp ASTRK  &trans  &trans  &kp HOME    &kp PG_DN  &kp PG_UP  &kp END    &caps_word
-                     &trans       &trans      &trans     &trans                    &trans      &trans     &trans     &trans
+        &kp LBKT     &kp LBRC    &kp LPAR    &kp N4     &kp N5                      &kp BSPC    &kp BSPC   &kp RPAR   &kp RBRC   &kp RBKT
+        &kp EXCL     &kp AT      &kp HASH    &kp DLLR   &kp PRCNT                   &kp LEFT    &kp DOWN   &kp UP     &kp RIGHT  &kp SEMI
+        &caps_word   &kp GRAVE   &kp CARET   &kp AMPS   &kp ASTRK  &trans   &trans  &kp HOME    &kp PG_DN  &kp PG_UP  &kp END    &caps_word
+                               &trans       &trans      &trans     &trans   &trans  &trans     &trans     &trans
             >; 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
+
 
 // 2
 left_layer {
@@ -142,14 +143,38 @@ left_layer {
                       
         &kp AMPS   &kp STAR   &kp MINUS   &kp GT     &kp TILDE                      &kp CARET   &kp AMPS   &kp GT     &kp LPAR   &kp RPAR
         &kp DQT    &kp LBKT   &kp LBRC    &kp LPAR   &kp BSLH                       &kp ASTRK   &kp MINUS  &kp EQUAL  &kp COLON  &kp SEMI
-        &kp SQT    &kp RBKT   &kp RBRC    &kp RPAR   &kp PIPE                       &trans      &kp UNDER  &kp PLUS   &kp PIPE   &trans
+        &kp SQT    &kp RBKT   &kp RBRC    &kp RPAR   &kp PIPE   &trans     &trans   &trans      &kp UNDER  &kp PLUS   &kp PIPE   &trans
                               &trans      &trans     &trans     &trans     &trans   &trans      &trans     &trans
             >;  
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
-
 // 3 
+num_layer {
+        display-name = " NumPad";
+        bindings = <
+        
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮                 ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│   del    │    1     │    2     │     3    │   0      │                 │  Vol Up  │          │          │          │          │
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤                 ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │    4     │    5     │     6    │          │                 │  Vol Dwn │          │          │          │          │
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤                 ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │    7     │   8      │     9    │          │                 │  Mute    │          │          │          │          │
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤                 ├──────────┼──────────┼──────────┴──────────┴──────────╯
+        //                                 ╰──────────┴──────────╯                 ╰──────────┴──────────╯
+                      
+        &kp DEL      &kp N1     &kp N2    &kp N3     &kp N0                         &kp C_VOL_UP  &kp LPAR   &kp RPAR   &trans    &trans
+        &trans       &kp N4     &kp N5    &kp N6     &trans                         &kp C_VOL_DN  &kp LBRC   &kp RBRC   &trans    &trans
+        &trans       &kp N7     &kp N8    &kp N9     &trans  &trans        &trans   &kp C_MUTE    &trans     &trans     &trans    &trans
+                                          &trans     &trans  &trans        &trans   &trans        &trans
+
+
+        >;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+        };
+
+
+// 4 
 adjust_layer {
             display-name = " FPad";
             bindings = <
