@@ -1,6 +1,12 @@
-name: Build ZMK firmware
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    paths:
+      - "config/**"
+  pull_request:
+    paths:
+      - "config/**"
+  workflow_dispatch:
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    uses: ClicketySplit/zmk/.github/workflows/build-user-config.yml@clickety_split_series_zmk_v3.5_power_domains
